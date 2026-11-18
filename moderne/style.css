@@ -279,15 +279,15 @@ h1, h2, h3 {
 .ouverture__grille {
   --debord: clamp(70px, 9vw, 150px);   /* hauteur de pot qui dépasse sous le bandeau */
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
   align-items: center;
   gap: 2rem;
-  min-height: clamp(460px, 42vw, 600px);
-  padding-block: 3.5rem 4rem;
+  min-height: 0;
+  padding-block: clamp(2.5rem, 4vw, 3.5rem) clamp(3rem, 4.5vw, 4rem);
 }
 .ouverture__texte { position: relative; z-index: 3; }
 .ouverture h1 {
-  font-size: clamp(3.2rem, 7.4vw, 7rem);
+  font-size: clamp(3.2rem, 5.2vw, 5.4rem);
   color: var(--creme);
   margin-bottom: 1.5rem;
 }
@@ -331,7 +331,7 @@ h1, h2, h3 {
   z-index: 2;
   right: var(--gouttiere);
   bottom: calc(-1 * var(--debord));
-  width: min(52%, 660px);
+  width: min(47%, 600px);
 }
 .debord__pot {
   position: relative;
