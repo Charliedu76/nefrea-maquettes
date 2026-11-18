@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../commun.css?v=20261118-213911">
-  <link rel="stylesheet" href="style.css?v=20261118-213911">
+  <link rel="stylesheet" href="../commun.css?v=20261118-215306">
+  <link rel="stylesheet" href="style.css?v=20261118-215306">
 </head>
 <body>
 <div class="bandeau-maquette"><span>Maquette 2 · Moderne</span><a href="../index.html">← Voir les 2 maquettes</a></div>
@@ -84,16 +84,56 @@
             <a class="lien-fleche" href="#pieces">Toute la boutique</a>
           </div>
         </div>
+        <img class="ouverture__embleme" src="../img/embleme.png" alt="" width="222" height="290">
         <div class="debord">
           <div class="debord__halo"></div>
           <div class="debord__ombre"></div>
-          <img class="debord__pot" src="../img/detoure/orea-beige.webp" alt="Bougie OREA beige allumée, trois mèches" width="1100" height="608" fetchpriority="high">
+          <img class="debord__pot" src="../img/detoure/orea-marbre.webp" alt="Bougie OREA en jesmonite marbre noir et blanc, allumée" width="1100" height="655" fetchpriority="high">
         </div>
       </div>
     </section>
 
+    <!-- Pièces phares : l'objet sort de sa carte -->
+    <section class="section" id="pieces" aria-labelledby="titre-pieces">
+      <div class="conteneur">
+        <div class="section__tete">
+          <div>
+            <span class="surtitre">Jesmonite</span>
+            <h2 class="titre-section" id="titre-pieces">Les pièces phares</h2>
+          </div>
+          <a class="lien-fleche" href="#">Toute la boutique</a>
+        </div>
+        <ul class="pieces">
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/orea-terracotta.webp" alt="" width="1100" height="605" loading="lazy">
+            <h3><a href="produit-orea.html">OREA</a></h3>
+            <p>Bougie perlée, pot rainuré</p>
+            <span class="piece__prix">dès 25 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/aura-4.webp" alt="" width="1085" height="824" loading="lazy">
+            <h3><a href="#">AURA</a></h3>
+            <p>Bougie perlée, pot lisse Ø 17 cm</p>
+            <span class="piece__prix">20 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/ecrins-2.webp" alt="" width="1100" height="607" loading="lazy">
+            <h3><a href="#">Les Écrins</a></h3>
+            <p>Pots seuls en jesmonite</p>
+            <span class="piece__prix">dès 18 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/nova-beige.webp" alt="" width="1100" height="627" loading="lazy">
+            <h3><a href="#">NOVA</a></h3>
+            <p>Plateau rond en jesmonite</p>
+            <span class="piece__prix">15 €</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Carrousel 3D des six teintes -->
-    <section class="section" id="teintes" aria-labelledby="titre-teintes">
+    <section class="section" id="teintes" aria-labelledby="titre-teintes" style="padding-top:0">
       <div class="conteneur teintes">
         <div>
           <span class="surtitre">OREA · 6 teintes</span>
@@ -131,45 +171,6 @@
             <label title="Noir"><input type="radio" name="carrousel" value="5" data-nom="Noir"><span class="galet galet--noir"></span><span class="visuellement-cache">Noir</span></label>
           </fieldset>
         </div>
-      </div>
-    </section>
-
-    <!-- Pièces phares : l'objet sort de sa carte -->
-    <section class="section" id="pieces" aria-labelledby="titre-pieces" style="padding-top:0">
-      <div class="conteneur">
-        <div class="section__tete">
-          <div>
-            <span class="surtitre">Jesmonite</span>
-            <h2 class="titre-section" id="titre-pieces">Les pièces phares</h2>
-          </div>
-          <a class="lien-fleche" href="#">Toute la boutique</a>
-        </div>
-        <ul class="pieces">
-          <li class="piece">
-            <img class="piece__objet" src="../img/detoure/orea-terracotta.webp" alt="" width="1100" height="605" loading="lazy">
-            <h3><a href="produit-orea.html">OREA</a></h3>
-            <p>Bougie perlée, pot rainuré</p>
-            <span class="piece__prix">dès 25 €</span>
-          </li>
-          <li class="piece">
-            <img class="piece__objet" src="../img/detoure/aura-4.webp" alt="" width="1085" height="824" loading="lazy">
-            <h3><a href="#">AURA</a></h3>
-            <p>Bougie perlée, pot lisse Ø 17 cm</p>
-            <span class="piece__prix">20 €</span>
-          </li>
-          <li class="piece">
-            <img class="piece__objet" src="../img/detoure/ecrins-2.webp" alt="" width="1100" height="607" loading="lazy">
-            <h3><a href="#">Les Écrins</a></h3>
-            <p>Pots seuls en jesmonite</p>
-            <span class="piece__prix">dès 18 €</span>
-          </li>
-          <li class="piece">
-            <img class="piece__objet" src="../img/detoure/nova-beige.webp" alt="" width="1100" height="627" loading="lazy">
-            <h3><a href="#">NOVA</a></h3>
-            <p>Plateau rond en jesmonite</p>
-            <span class="piece__prix">15 €</span>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -302,7 +303,7 @@
       <div class="conteneur">
         <div class="bandeau-photo">
           <div class="bandeau-photo__image">
-            <img src="../img/ambiance-4.jpg" alt="Brûleurs à fondants allumés sur une table de chevet" width="1600" height="893" loading="lazy">
+            <img src="../img/ambiance-chambre-nefrea.jpg" alt="Bougies OREA terracotta et AURA marbre allumées sur une table de chevet, entourées de fondants" width="1600" height="893" loading="lazy">
           </div>
           <div class="bandeau-photo__texte">
             <h2 id="titre-bandeau">Une place dans chaque pièce</h2>
@@ -362,6 +363,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261118-213911"></script>
+  <script src="../js/main.js?v=20261118-215306"></script>
 </body>
 </html>

@@ -157,9 +157,9 @@ h1, h2, h3 {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 2rem;
-  min-height: 72px;
+  min-height: 84px;
 }
-.entete__logo img { height: 48px; width: auto; }
+.entete__logo img { height: 62px; width: auto; }
 
 .nav {
   display: flex;
@@ -168,12 +168,12 @@ h1, h2, h3 {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.93rem;
+  font-size: 1.04rem;
   font-weight: 500;
 }
 .nav a {
   display: block;
-  padding: 0.45rem 0.9rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   text-decoration: none;
   transition: background-color 0.2s;
@@ -349,6 +349,18 @@ h1, h2, h3 {
   height: 18%;
   border-radius: 50%;
   background: radial-gradient(closest-side, rgba(60, 20, 18, 0.42), rgba(60, 20, 18, 0));
+}
+/* L'emblème de Néfréa, dans la partie vide du bandeau, au-dessus du pot */
+.ouverture__embleme {
+  position: absolute;
+  z-index: 1;
+  right: calc(var(--gouttiere) + min(47%, 600px) / 2);
+  top: clamp(1.75rem, 3vw, 2.75rem);
+  width: auto;
+  height: clamp(120px, 12vw, 180px);
+  transform: translateX(50%);
+  opacity: 0.92;
+  filter: drop-shadow(0 0 26px rgba(255, 196, 130, 0.28));
 }
 .debord__halo {         /* lueur des flammes, dans le bandeau */
   position: absolute;
@@ -615,7 +627,7 @@ h1, h2, h3 {
   overflow: visible;
 }
 .bandeau-photo__image { position: absolute; inset: 0; border-radius: var(--rayon); overflow: hidden; }
-.bandeau-photo__image img { width: 100%; height: 100%; object-fit: cover; }
+.bandeau-photo__image img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 72%; }
 .bandeau-photo__image::after {
   content: "";
   position: absolute;
@@ -739,7 +751,7 @@ h1, h2, h3 {
 
 .scene-produit {
   position: sticky;
-  top: 96px;
+  top: 104px;
   aspect-ratio: 1 / 1.05;
   border-radius: 28px;
   overflow: hidden;
@@ -884,7 +896,7 @@ h1, h2, h3 {
 
 .toast {
   position: fixed;
-  top: calc(88px + env(safe-area-inset-top, 0px));
+  top: calc(100px + env(safe-area-inset-top, 0px));
   right: calc(var(--gouttiere) + env(safe-area-inset-right, 0px));
   z-index: 60;
   display: flex;
@@ -916,14 +928,15 @@ h1, h2, h3 {
 @media (max-width: 960px) {
   .entete__barre { grid-template-columns: auto 1fr auto; min-height: 62px; gap: 0.5rem; }
   .entete__logo { justify-self: center; grid-column: 2; }
-  .entete__logo img { height: 40px; }
+  .entete__logo img { height: 46px; }
   .burger { display: inline-grid; grid-column: 1; grid-row: 1; }
   .entete nav { display: none; }
   .icones .masque-mobile { display: none; }
 
-  .ouverture__grille { --debord: 20vw; grid-template-columns: minmax(0, 1fr); min-height: 0; padding-block: 2.5rem calc(min(88vw, 520px) * 0.553 - var(--debord) + 2.5rem); }
+  .ouverture__grille { --debord: 20vw; grid-template-columns: minmax(0, 1fr); min-height: 0; padding-block: 2.5rem calc(min(88vw, 520px) * 0.595 - var(--debord) + 2.5rem); }
   .debord { right: 50%; width: min(88vw, 520px); transform: translateX(50%); }
   .ouverture + .section { padding-top: calc(20vw + 3rem); }
+  .ouverture__embleme { display: none; }
 
   .teintes,
   .cire,
