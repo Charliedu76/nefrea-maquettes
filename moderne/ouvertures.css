@@ -1,0 +1,336 @@
+/* ==========================================================================
+   Pistes d'ouverture pour la maquette Moderne (A, B, C, D)
+   S'ajoute à style.css : mêmes couleurs, mêmes polices.
+   ========================================================================== */
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Sommaire des pistes, dans le bandeau noir du haut */
+.bandeau-maquette .pistes-nav { display: flex; gap: 0.35rem; }
+.bandeau-maquette .pistes-nav a {
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  height: 26px;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: rgba(243, 236, 230, 0.12);
+  text-decoration: none;
+}
+.bandeau-maquette .pistes-nav a:hover { background: rgba(243, 236, 230, 0.25); }
+
+/* Bandeau d'explication avant chaque piste */
+.piste-tete {
+  scroll-margin-top: 72px;
+  padding: clamp(2rem, 4vw, 3rem) 0 clamp(1.5rem, 3vw, 2rem);
+  background: var(--poudre);
+}
+.piste-tete .conteneur { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
+.piste-tete__lettre {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--vin);
+  color: var(--creme);
+  font-family: var(--f-titre);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.piste-tete h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
+.piste-tete p { flex-basis: 100%; margin: 0; max-width: 44rem; color: var(--gris); }
+
+/* Textes communs aux ouvertures */
+.ouv-texte { position: relative; z-index: 3; }
+.ouv-texte h1 { font-size: clamp(2.9rem, 6.4vw, 6rem); margin-bottom: 1.25rem; color: var(--creme); }
+.ouv-texte h1 span { color: var(--or); }
+.ouv-texte p { margin: 0 0 2rem; max-width: 26rem; color: rgba(255, 247, 242, 0.78); font-size: 1.08rem; }
+.ouv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
+.ouv-actions .lien-fleche { color: var(--creme); }
+
+/* --------------------------------------------------------------------------
+   A · Sortie de cadre
+   -------------------------------------------------------------------------- */
+
+.ouv-a {
+  position: relative;
+  overflow-x: clip;
+  background: radial-gradient(70% 80% at 72% 50%, #6e1c19, var(--nuit) 70%);
+  color: var(--creme);
+}
+.ouv-a__grille {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  padding-block: clamp(3rem, 6vw, 5rem) clamp(6rem, 10vw, 8.5rem);
+}
+.cadre { position: relative; width: min(100%, 440px); margin-inline: auto; }
+.cadre__photo {
+  aspect-ratio: 4 / 5;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(10, 0, 0, 0.4);
+}
+/* on agrandit la photo depuis le haut : sa bougie se retrouve juste derrière la bougie détourée */
+.cadre__photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.55); transform-origin: 50% 0%; }
+.cadre__objet {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  bottom: -11%;
+  transform:
+    perspective(1000px)
+    translate3d(var(--dx, 0px), var(--dy, 0px), 0)
+    rotateX(var(--tx, 4deg))
+    rotateY(var(--ty, 0deg));
+  transition: transform 0.5s cubic-bezier(.2, .7, .2, 1);
+  filter: drop-shadow(0 34px 26px rgba(10, 0, 0, 0.55));
+}
+.cadre__objet img { width: 100%; }
+.cadre__etiquette {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 247, 242, 0.9);
+  color: var(--vin);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   B · L'étagère
+   -------------------------------------------------------------------------- */
+
+.ouv-b {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #4e1112 0%, #350a0b 62%, #2a0708 100%);
+  color: var(--creme);
+}
+.ouv-b .ouv-texte { padding-top: clamp(3rem, 6vw, 5rem); max-width: 40rem; }
+.ouv-b .ouv-texte h1 { font-size: clamp(2.6rem, 5.4vw, 5rem); }
+
+.etagere { position: relative; height: clamp(300px, 36vw, 470px); margin-top: -1rem; }
+.etagere__lueur {
+  position: absolute;
+  left: 56%;
+  bottom: 18%;
+  width: 70%;
+  aspect-ratio: 2;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(255, 180, 110, 0.32), rgba(255, 180, 110, 0));
+}
+.etagere__plateau {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 30px;
+  height: 140px;
+  transform: perspective(520px) rotateX(64deg);
+  transform-origin: 50% 100%;
+  background: linear-gradient(180deg, #8f5e4d, #d5b19b 85%);
+  box-shadow: inset 0 -6px 0 rgba(255, 240, 225, 0.35);
+}
+.etagere__chant {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 12px;
+  height: 18px;
+  background: linear-gradient(180deg, #a3735f, #6c4335);
+}
+.etagere__objet {
+  position: absolute;
+  z-index: var(--z, 1);
+  left: var(--x);
+  bottom: var(--b);
+  width: var(--l);
+  transform: translate3d(calc(-50% + var(--dx, 0px)), var(--dy, 0px), 0);
+  filter: blur(var(--flou, 0px)) brightness(var(--lum, 1));
+}
+.etagere__objet img { position: relative; z-index: 1; width: 100%; }
+.etagere__objet::after {          /* ombre de contact sur l'étagère */
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -4%;
+  height: 14%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(40, 10, 8, 0.55), rgba(40, 10, 8, 0));
+}
+.etagere__objet--1 { --x: 57%; --b: 34px; --l: clamp(230px, 31vw, 440px); --z: 5; }
+.etagere__objet--2 { --x: 27%; --b: 78px; --l: clamp(130px, 17vw, 250px); --z: 2; --flou: 0.8px; --lum: 0.85; }
+.etagere__objet--3 { --x: 85%; --b: 80px; --l: clamp(120px, 15vw, 220px); --z: 2; --flou: 0.8px; --lum: 0.85; }
+.etagere__objet--4 { --x: 101%; --b: 22px; --l: clamp(170px, 21vw, 300px); --z: 6; }
+
+/* --------------------------------------------------------------------------
+   C · La bougie qui se compose (au défilement)
+   -------------------------------------------------------------------------- */
+
+.ouv-c { --p: 0; position: relative; height: 320vh; background: var(--nuit); color: var(--creme); }
+.ouv-c__scene {
+  position: sticky;
+  top: 72px;
+  height: calc(100vh - 72px);
+  min-height: 520px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 2rem;
+}
+.ouv-c__scene::before {   /* le fond se réchauffe quand la flamme s'allume */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(55% 60% at 68% 58%, #a23e2c, #5c1514 45%, transparent 75%);
+  opacity: clamp(0, calc((var(--p) - 0.55) * 3), 1);
+}
+.ouv-c__textes { position: relative; z-index: 2; padding-left: max(var(--gouttiere), calc((100vw - var(--max)) / 2 + var(--gouttiere))); min-height: 16rem; }
+.etape-c {
+  position: absolute;
+  inset: 0 0 auto max(var(--gouttiere), calc((100vw - var(--max)) / 2 + var(--gouttiere)));
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.etape-c.est-active { opacity: 1; transform: none; }
+.etape-c .surtitre { color: var(--or); }
+.etape-c h2 { font-size: clamp(2.4rem, 5vw, 4.5rem); }
+.etape-c h2 span { color: var(--or); }
+.etape-c p { margin: 1rem 0 0; max-width: 24rem; color: rgba(255, 247, 242, 0.75); }
+.etape-c .ouv-actions { margin-top: 1.75rem; }
+
+.ouv-c__points { display: flex; gap: 0.5rem; margin-top: 18rem; }
+.ouv-c__points span { width: 28px; height: 4px; border-radius: 2px; background: rgba(215, 187, 148, 0.25); transition: background-color 0.3s; }
+.ouv-c__points span.est-active { background: var(--or); }
+
+.pot-c { position: relative; z-index: 2; width: min(92%, 560px); justify-self: center; }
+.pot-c img { display: block; width: 100%; filter: drop-shadow(0 40px 34px rgba(10, 0, 0, 0.55)); }
+.pot-c__plein { position: absolute; inset: auto 0 0 0; opacity: clamp(0, calc((var(--p) - 0.52) * 8), 1); }
+.pot-c__vide { opacity: calc(1 - clamp(0, (var(--p) - 0.52) * 8, 1)); }
+.pot-c__cire {              /* la cire perlée qui monte dans le pot vide */
+  --remplissage: clamp(0.08, calc((var(--p) - 0.12) * 2.6), 1);
+  position: absolute;
+  left: 50%;
+  top: calc(36% - 15% * var(--remplissage));
+  width: 86%;
+  height: 25%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(var(--remplissage), calc(0.6 + 0.4 * var(--remplissage)));
+  background:
+    radial-gradient(circle, #efe3dc 1.4px, transparent 1.8px) 0 0 / 7px 6px,
+    radial-gradient(circle, #e2d0c7 1.3px, transparent 1.7px) 3.5px 3px / 7px 6px,
+    #fffaf6;
+  opacity: calc(1 - clamp(0, (var(--p) - 0.52) * 8, 1));
+  box-shadow: inset 0 4px 10px rgba(120, 80, 60, 0.18);
+}
+.pot-c__perles {
+  position: absolute;
+  left: 50%;
+  top: -42%;
+  width: 40px;
+  height: 62%;
+  transform: translateX(-50%);
+  opacity: clamp(0, min(calc((var(--p) - 0.1) * 8), calc((0.5 - var(--p)) * 8)), 1);
+}
+.pot-c__perles i {
+  position: absolute;
+  left: calc(var(--x) * 1px);
+  top: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fffaf6;
+  box-shadow: inset -1px -2px 0 rgba(160, 120, 100, 0.35);
+  animation: chute 0.9s linear infinite;
+  animation-delay: calc(var(--d) * -0.15s);
+}
+@keyframes chute {
+  from { top: 0; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  to { top: 100%; opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   D · La lumière
+   -------------------------------------------------------------------------- */
+
+.ouv-d {
+  --lx: 66%;
+  --ly: 60%;
+  position: relative;
+  min-height: clamp(560px, 46vw, 760px);
+  overflow: hidden;
+  background: #170405;
+  color: var(--creme);
+  display: flex;
+  align-items: center;
+}
+.ouv-d__lueur {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--lx) var(--ly), rgba(255, 176, 96, 0.5) 0, rgba(150, 54, 42, 0.34) 22%, rgba(23, 4, 5, 0) 58%);
+  pointer-events: none;
+  animation: lueur-d 2.6s ease-in-out infinite;
+}
+@keyframes lueur-d { 50% { opacity: 0.82; } }
+.ouv-d__bougie {
+  position: absolute;
+  z-index: 2;
+  left: var(--lx);
+  top: var(--ly);
+  width: clamp(220px, 25vw, 360px);
+  transform: translate(-50%, -38%);
+  filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+.ouv-d .ouv-texte { max-width: 38rem; }
+.titre-eclaire { position: relative; }
+.ouv-texte .titre-eclaire__base { color: #5a302a; }
+.ouv-texte .titre-eclaire__base span { color: #6e3a2e; }
+.ouv-texte .titre-eclaire__lumiere { color: #ffe2b8; }
+.ouv-texte .titre-eclaire__lumiere span { color: #ffc976; }
+.titre-eclaire__lumiere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle at var(--tx, 120%) var(--ty, 60%), #000 0, rgba(0, 0, 0, 0.75) 260px, transparent 640px);
+          mask-image: radial-gradient(circle at var(--tx, 120%) var(--ty, 60%), #000 0, rgba(0, 0, 0, 0.75) 260px, transparent 640px);
+}
+.ouv-d__aide { margin-top: 1.5rem; font-size: 0.85rem; color: rgba(255, 247, 242, 0.45); }
+@media (hover: none), (max-width: 960px) { .ouv-d__aide { display: none; } }
+
+/* Fin de page */
+.pistes-fin { padding: 3rem 0 4rem; background: var(--poudre); text-align: left; }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 960px) {
+  .ouv-a__grille { grid-template-columns: minmax(0, 1fr); padding-bottom: 7rem; }
+  .cadre { order: -1; width: min(78%, 380px); }
+
+  .etagere__objet--1 { --x: 52%; --l: 62vw; }
+  .etagere__objet--2 { --x: 14%; --l: 34vw; }
+  .etagere__objet--3 { --x: 88%; --l: 30vw; }
+  .etagere__objet--4 { display: none; }
+
+  .ouv-c { height: 280vh; }
+  .ouv-c__scene { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-items: start; gap: 0; padding-top: 1.5rem; }
+  .ouv-c__textes { min-height: 15rem; padding-right: var(--gouttiere); }
+  .etape-c { right: var(--gouttiere); }
+  .ouv-c__points { margin-top: 13.5rem; }
+  .pot-c { width: min(84%, 420px); align-self: center; }
+
+  .ouv-d { --lx: 50%; --ly: 72%; align-items: flex-start; padding-top: 3rem; min-height: 640px; }
+  .ouv-d__bougie { width: 62vw; }
+}
