@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquettes Néfréa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,700&family=Figtree:wght@400;500;600&family=Gloock&display=swap" rel="stylesheet">
+  <style>
+    /* Page d'entrée : trois cartes, une par maquette. Thème clair unique (aux couleurs de la marque). */
+    :root {
+      --fond: #f6efe9;
+      --carte: #fffaf6;
+      --encre: #2a1717;
+      --gris: #7a6662;
+      --vin: #681313;
+      --or: #d7bb94;
+      --trait: rgba(42, 23, 23, 0.12);
+      --f-texte: "Figtree", "Segoe UI", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--fond);
+      color: var(--encre);
+      font-family: var(--f-texte);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--vin); outline-offset: 3px; border-radius: 4px; }
+
+    .page {
+      max-width: 1240px;
+      margin-inline: auto;
+      padding: clamp(2rem, 5vw, 4rem) max(16px, 4vw) 3rem;
+    }
+
+    .tete { display: grid; gap: 1.25rem; max-width: 46rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+    .tete img { height: 64px; width: auto; }
+    .tete h1 {
+      margin: 0;
+      font-family: "Gloock", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      color: var(--vin);
+      text-wrap: balance;
+    }
+    .tete p { margin: 0; color: var(--gris); font-size: 1.08rem; }
+
+    .cartes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 1000px;
+      gap: clamp(1rem, 2.5vw, 1.75rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .carte {
+      display: flex;
+      flex-direction: column;
+      border-radius: 18px;
+      background: var(--carte);
+      box-shadow: 0 1px 2px rgba(42, 23, 23, 0.05), 0 10px 30px rgba(42, 23, 23, 0.06);
+      overflow: hidden;
+    }
+    .carte__corps { display: flex; flex-direction: column; gap: 0.6rem; flex: 1; padding: 1.4rem 1.5rem 1.5rem; }
+    .carte__num { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
+    .carte h2 { margin: 0; font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
+    .carte p { margin: 0; color: var(--gris); }
+    .carte__liens { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: auto; padding-top: 0.9rem; }
+    .bouton {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 1.2rem;
+      border-radius: 999px;
+      background: var(--vin);
+      color: #fffaf6;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .bouton:hover { background: #8a2b2b; }
+    .bouton--clair { background: transparent; color: var(--vin); box-shadow: inset 0 0 0 1px currentColor; }
+    .bouton--clair:hover { background: rgba(104, 19, 19, 0.06); }
+
+    /* Aperçus : une petite composition dans le style de chaque maquette */
+    .apercu { position: relative; aspect-ratio: 4 / 3; overflow: hidden; display: block; text-decoration: none; }
+    .apercu img { width: 100%; height: 100%; object-fit: cover; }
+
+    .apercu--bordeaux { display: grid; grid-template-columns: 45% 55%; background: #681313; }
+    .apercu--bordeaux span {
+      align-self: center;
+      padding: 0 1rem 0 1.25rem;
+      font-family: "Gloock", Georgia, serif;
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      line-height: 1.05;
+      color: #fffaf4;
+    }
+
+    .apercu--galerie { display: grid; grid-template-rows: auto 1fr; background: #ece8e2; }
+    .apercu--galerie span {
+      padding: 1.1rem 1.25rem 0.8rem;
+      font-family: "Bodoni Moda", Didot, Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      line-height: 1;
+      color: #1f1b1b;
+      text-wrap: balance;
+    }
+
+    .apercu--moderne { background: radial-gradient(60% 70% at 60% 50%, #96362a, #5c1514 45%, #33090b); }
+    .apercu--moderne .objet {
+      position: absolute;
+      width: 62%;
+      height: auto;
+      right: 6%;
+      top: 22%;
+      filter: drop-shadow(0 20px 18px rgba(15, 2, 3, 0.55));
+      transform: perspective(600px) rotateY(-10deg) rotateX(6deg);
+    }
+    .apercu--moderne .objet--loin {
+      width: 36%;
+      right: auto;
+      left: -8%;
+      top: -6%;
+      filter: blur(1.5px) drop-shadow(0 14px 12px rgba(15, 2, 3, 0.5));
+      transform: perspective(600px) rotateY(38deg) rotateX(20deg) rotate(-12deg);
+    }
+    .apercu--moderne span {
+      position: absolute;
+      left: 1.1rem;
+      bottom: 1rem;
+      font-family: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+      font-weight: 700;
+      font-stretch: 80%;
+      font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+      line-height: 0.95;
+      color: #fff7f2;
+    }
+    .apercu--moderne span em { font-style: normal; color: var(--or); }
+
+    .avis {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.5rem 3rem;
+      margin-top: clamp(2.5rem, 6vw, 4rem);
+      padding-top: 2rem;
+      border-top: 1px solid var(--trait);
+    }
+    .avis h2 { margin: 0 0 0.5rem; font-size: 1.15rem; font-weight: 600; }
+    .avis p { margin: 0; color: var(--gris); }
+
+    .note { margin-top: 2.5rem; font-size: 0.85rem; color: var(--gris); }
+
+    @media (max-width: 900px) {
+      .cartes { grid-template-columns: 1fr; max-width: 560px; }
+      .avis { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="tete">
+      <img src="img/logo-vin.png" alt="Néfréa" width="606" height="471">
+      <h1>Deux idées pour le nouveau site</h1>
+      <p>Chaque maquette se visite comme un vrai site : la page d'accueil et la fiche de la bougie OREA, sur ordinateur ou sur téléphone. Les photos et les textes viennent de la boutique actuelle.</p>
+    </header>
+
+    <ul class="cartes">
+      <li class="carte">
+        <a class="apercu apercu--bordeaux" href="bordeaux/index.html" aria-label="Ouvrir la maquette Bordeaux">
+          <span>Une lumière douce, façonnée à la main</span>
+          <img src="img/ambiance-6.jpg" alt="" width="1600" height="893">
+        </a>
+        <div class="carte__corps">
+          <span class="carte__num">Maquette 1</span>
+          <h2>Bordeaux</h2>
+          <p>La plus proche de l'identité actuelle : bordeaux, or et crème. Le nuancier change la photo de la bougie selon la teinte choisie.</p>
+          <div class="carte__liens">
+            <a class="bouton" href="bordeaux/index.html">Voir l'accueil</a>
+            <a class="bouton bouton--clair" href="bordeaux/produit-orea.html">Fiche produit</a>
+          </div>
+        </div>
+      </li>
+      <li class="carte">
+        <a class="apercu apercu--moderne" href="moderne/index.html" aria-label="Ouvrir la maquette Moderne">
+          <img class="objet objet--loin" src="img/detoure/nova-marbre.webp" alt="" width="1100" height="642">
+          <img class="objet" src="img/detoure/orea-beige.webp" alt="" width="1100" height="608">
+          <span>Coulées, poncées,<br><em>parfumées à la main.</em></span>
+        </a>
+        <div class="carte__corps">
+          <span class="carte__num">Maquette 2</span>
+          <h2>Moderne</h2>
+          <p>Les pots sont détourés et flottent dans la page, en perspective sur les côtés. Le nuancier tourne en 3D.</p>
+          <div class="carte__liens">
+            <a class="bouton" href="moderne/index.html">Voir l'accueil</a>
+            <a class="bouton bouton--clair" href="moderne/produit-orea.html">Fiche produit</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <section class="avis" aria-label="Comment donner son avis">
+      <div>
+        <h2>Ce qu'on peut tester</h2>
+        <p>Changer la teinte, la taille et la senteur sur la fiche produit, ajouter au panier, ouvrir le menu sur téléphone. Le panier est simulé : rien n'est commandé.</p>
+      </div>
+      <div>
+        <h2>Pour donner ton avis</h2>
+        <p>Dis laquelle tu préfères, ou ce que tu garderais dans chacune : par exemple les couleurs de la 1 avec les pots flottants de la 2. Tout peut se mélanger.</p>
+      </div>
+    </section>
+
+    <p class="note">Aperçu uniquement : la boutique Shopify n'est pas modifiée. Certains textes ont été réécrits et restent à valider.</p>
+  </main>
+</body>
+</html>

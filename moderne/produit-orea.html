@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OREA · Néfréa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../commun.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bandeau-maquette"><span>Maquette 2 · Moderne</span><a href="../index.html">← Voir les 2 maquettes</a></div>
+
+  <a class="visuellement-cache" href="#contenu">Aller au contenu</a>
+
+  <div class="annonce">Livraison offerte dès 59 € d'achat · Fait main</div>
+
+  <header class="entete sur-fonce">
+    <div class="conteneur entete__barre">
+      <button class="icone-bouton burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" data-ouvre-menu>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+      </button>
+      <a class="entete__logo" href="index.html" aria-label="Néfréa, accueil">
+        <img src="../img/logo.png" alt="Néfréa" width="606" height="471">
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="nav">
+          <li><a href="index.html#teintes" aria-current="page">Bougies</a></li>
+          <li><a href="index.html#cire">Fondants &amp; cires</a></li>
+          <li><a href="index.html#pieces">Jesmonite</a></li>
+          <li><a href="index.html#pieces">Accessoires</a></li>
+          <li><a href="#pied">Notre histoire</a></li>
+          <li><a href="#pied">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="icones">
+        <a class="icone-bouton masque-mobile" href="#" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+        </a>
+        <a class="icone-bouton" href="#" aria-label="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="panier-compteur" data-compteur-panier hidden>0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tiroir" id="menu-mobile" data-menu>
+    <div class="tiroir__fond" data-ferme-menu></div>
+    <div class="tiroir__panneau" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="tiroir__haut">
+        <img src="../img/logo.png" alt="" width="606" height="471" style="height:40px;width:auto">
+        <button class="icone-bouton" type="button" aria-label="Fermer le menu" data-ferme-menu>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <ul class="tiroir__liste">
+        <li><a href="index.html#teintes">Bougies</a></li>
+        <li><a href="index.html#cire">Fondants &amp; cires</a></li>
+        <li><a href="index.html#pieces">Jesmonite</a></li>
+        <li><a href="index.html#pieces">Accessoires</a></li>
+      </ul>
+      <ul class="tiroir__secondaire">
+        <li><a href="#pied">Notre histoire</a></li>
+        <li><a href="#pied">FAQ</a></li>
+        <li><a href="#pied">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="contenu">
+    <div class="conteneur">
+      <nav class="fil-ariane" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#teintes">Bougies</a></li>
+          <li aria-current="page">OREA</li>
+        </ol>
+      </nav>
+
+      <div class="produit" data-produit>
+        <div class="scene-produit sur-fonce" data-scene>
+          <div class="vedette__halo"></div>
+          <div class="vedette__socle"></div>
+          <div class="scene-produit__objet" data-incline>
+            <img src="../img/detoure/orea-terracotta.webp" alt="Bougie OREA, teinte terracotta" width="1100" height="605" data-image-principale data-motif="detoure/orea-{t}.webp">
+          </div>
+          <span class="scene-produit__legende" data-libelle-teinte>Terracotta</span>
+          <div class="scene-produit__photo"><img src="../img/ambiance-6.jpg" alt="OREA beige allumée sur une table" width="1600" height="893" loading="lazy"></div>
+        </div>
+
+        <div class="produit__infos">
+          <span class="surtitre">Bougie perlée · jesmonite</span>
+          <h1>OREA</h1>
+          <p class="produit__prix"><span data-prix>25,00 €</span> <small>TTC</small></p>
+          <p class="produit__accroche">Un pot rond aux rainures délicates, coulé à la main en jesmonite et garni de 700&nbsp;g de cire perlée parfumée.</p>
+
+          <form data-formulaire-achat>
+            <fieldset class="option">
+              <legend>Teinte <span data-libelle-teinte>Terracotta</span></legend>
+              <div class="choix-teintes">
+                <label title="Terracotta"><input type="radio" name="teinte" value="terracotta" data-nom="Terracotta" checked><span class="galet galet--terracotta"></span><span class="visuellement-cache">Terracotta</span></label>
+                <label title="Beige"><input type="radio" name="teinte" value="beige" data-nom="Beige"><span class="galet galet--beige"></span><span class="visuellement-cache">Beige</span></label>
+                <label title="Blanc"><input type="radio" name="teinte" value="blanc" data-nom="Blanc"><span class="galet galet--blanc"></span><span class="visuellement-cache">Blanc</span></label>
+                <label title="Gris granite"><input type="radio" name="teinte" value="granite" data-nom="Gris granite"><span class="galet galet--granite"></span><span class="visuellement-cache">Gris granite</span></label>
+                <label title="Marbre noir et blanc"><input type="radio" name="teinte" value="marbre" data-nom="Marbre noir et blanc"><span class="galet galet--marbre"></span><span class="visuellement-cache">Marbre noir et blanc</span></label>
+                <label title="Noir"><input type="radio" name="teinte" value="noir" data-nom="Noir"><span class="galet galet--noir"></span><span class="visuellement-cache">Noir</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="option">
+              <legend>Taille <span data-libelle-taille>20 cm</span></legend>
+              <div class="pastilles">
+                <label><input type="radio" name="taille" value="20 cm" data-prix="25" checked><span>20 cm <small>25 €</small></span></label>
+                <label><input type="radio" name="taille" value="25 cm" data-prix="35"><span>25 cm <small>35 €</small></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="option">
+              <legend>Senteur <span data-libelle-senteur>Vanille épicée</span></legend>
+              <div class="pastilles">
+                <label><input type="radio" name="senteur" value="Vanille épicée" checked><span>Vanille épicée</span></label>
+                <label><input type="radio" name="senteur" value="Rose"><span>Rose</span></label>
+                <label><input type="radio" name="senteur" value="Pomme cannelle"><span>Pomme cannelle</span></label>
+              </div>
+            </fieldset>
+
+            <div class="achat">
+              <div class="quantite">
+                <button type="button" aria-label="Retirer un" data-quantite="-1">−</button>
+                <label class="visuellement-cache" for="quantite">Quantité</label>
+                <input id="quantite" type="number" min="1" max="20" value="1" inputmode="numeric" data-champ-quantite>
+                <button type="button" aria-label="Ajouter un" data-quantite="1">+</button>
+              </div>
+              <button class="bouton" type="submit">Ajouter au panier · <span data-prix-total>25,00 €</span></button>
+            </div>
+          </form>
+
+          <p class="produit__delai"><strong>Fabriquée pour vous :</strong> expédition sous 4 jours ouvrés environ. Chaque pot est unique, de légères variations de teinte font partie de son caractère.</p>
+
+          <div class="accordeon">
+            <details open>
+              <summary>Description</summary>
+              <div class="accordeon__contenu">
+                <p>Sa forme ronde et ses rainures délicates lui confèrent un design sculptural, à la fois raffiné et intemporel. Ce pot trouve facilement sa place sur une étagère, une console ou une table.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Caractéristiques</summary>
+              <div class="accordeon__contenu">
+                <dl class="caracteristiques">
+                  <dt>Matière</dt><dd>Jesmonite coulée à la main</dd>
+                  <dt>Forme</dt><dd>Ronde, extérieur rainuré</dd>
+                  <dt>Cire</dt><dd>700 g de cire perlée végétale (soja, coco, palme)</dd>
+                  <dt>Parfums</dt><dd>Parfums de Grasse</dd>
+                </dl>
+              </div>
+            </details>
+            <details>
+              <summary>Utilisation et sécurité</summary>
+              <div class="accordeon__contenu">
+                <ul>
+                  <li>Sur une surface stable, loin des courants d'air et des objets inflammables.</li>
+                  <li>Ne jamais laisser la bougie allumée sans surveillance.</li>
+                  <li>Hors de portée des enfants et des animaux.</li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>Livraison et retours</summary>
+              <div class="accordeon__contenu">
+                <p>Environ 4 jours ouvrés de fabrication, puis le délai du transporteur. Livraison offerte dès 59 €. Retours sous 14 jours après réception.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="titre-collection">
+      <div class="conteneur">
+        <div class="section__tete">
+          <div>
+            <span class="surtitre">Dans la même collection</span>
+            <h2 class="titre-section" id="titre-collection">À associer</h2>
+          </div>
+        </div>
+        <ul class="pieces pieces--3">
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/nova-terracotta.webp" alt="" width="1100" height="628" loading="lazy">
+            <h3><a href="#">NOVA</a></h3>
+            <p>Plateau rond en jesmonite</p>
+            <span class="piece__prix">15 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/ecrins-3.webp" alt="" width="1100" height="609" loading="lazy">
+            <h3><a href="#">Les Écrins</a></h3>
+            <p>Pots seuls en jesmonite</p>
+            <span class="piece__prix">dès 18 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/aura-5.webp" alt="" width="1100" height="866" loading="lazy">
+            <h3><a href="#">AURA</a></h3>
+            <p>Bougie perlée, pot lisse</p>
+            <span class="piece__prix">20 €</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied sur-fonce" id="pied">
+    <div class="conteneur">
+      <div class="pied__haut">
+        <div>
+          <div class="pied__logo"><img src="../img/logo.png" alt="Néfréa" width="606" height="471" loading="lazy"></div>
+          <p>Les nouveautés en avant-première, une fois par mois au plus.</p>
+          <form class="formulaire-ligne" onsubmit="event.preventDefault()">
+            <label class="visuellement-cache" for="email-pied">Adresse e-mail</label>
+            <input id="email-pied" type="email" placeholder="Votre adresse e-mail" autocomplete="email">
+            <button class="bouton bouton--or" type="submit">S'inscrire</button>
+          </form>
+        </div>
+        <div>
+          <h3>Boutique</h3>
+          <ul>
+            <li><a href="index.html#teintes">Bougies</a></li>
+            <li><a href="index.html#cire">Fondants &amp; cires</a></li>
+            <li><a href="index.html#pieces">Jesmonite</a></li>
+            <li><a href="index.html#pieces">Accessoires</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aide</h3>
+          <ul>
+            <li><a href="#">Questions fréquentes</a></li>
+            <li><a href="#">Livraison</a></li>
+            <li><a href="#">Retours</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Néfréa</h3>
+          <ul>
+            <li><a href="#">Notre histoire</a></li>
+            <li><a href="https://www.instagram.com/nefrea.bougies" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pied__bas">
+        <span>© 2026 Néfréa</span>
+        <ul>
+          <li><a href="#">Conditions de vente</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="barre-achat" aria-hidden="true">
+    <div class="barre-achat__infos"><strong>OREA</strong><span data-resume-variante>Terracotta · 20 cm · 25,00 €</span></div>
+    <button class="bouton" type="button" tabindex="-1" data-achat-rapide>Ajouter</button>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast>
+    <img src="../img/detoure/orea-terracotta.webp" alt="" data-toast-image>
+    <p><strong>Ajouté au panier</strong><br><span data-toast-texte>OREA</span></p>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

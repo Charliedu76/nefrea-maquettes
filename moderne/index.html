@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Néfréa · Bougies perlées et jesmonite faites main</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../commun.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bandeau-maquette"><span>Maquette 2 · Moderne</span><a href="../index.html">← Voir les 2 maquettes</a></div>
+
+  <a class="visuellement-cache" href="#contenu">Aller au contenu</a>
+
+  <div class="annonce">Livraison offerte dès 59 € d'achat · Fait main</div>
+
+  <header class="entete sur-fonce">
+    <div class="conteneur entete__barre">
+      <button class="icone-bouton burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" data-ouvre-menu>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+      </button>
+      <a class="entete__logo" href="index.html" aria-label="Néfréa, accueil">
+        <img src="../img/logo.png" alt="Néfréa" width="606" height="471">
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="nav">
+          <li><a href="#teintes">Bougies</a></li>
+          <li><a href="#cire">Fondants &amp; cires</a></li>
+          <li><a href="#pieces">Jesmonite</a></li>
+          <li><a href="#pieces">Accessoires</a></li>
+          <li><a href="#pied">Notre histoire</a></li>
+          <li><a href="#pied">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="icones">
+        <a class="icone-bouton masque-mobile" href="#" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+        </a>
+        <a class="icone-bouton" href="#" aria-label="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="panier-compteur" data-compteur-panier hidden>0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tiroir" id="menu-mobile" data-menu>
+    <div class="tiroir__fond" data-ferme-menu></div>
+    <div class="tiroir__panneau" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="tiroir__haut">
+        <img src="../img/logo.png" alt="" width="606" height="471" style="height:40px;width:auto">
+        <button class="icone-bouton" type="button" aria-label="Fermer le menu" data-ferme-menu>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <ul class="tiroir__liste">
+        <li><a href="#teintes">Bougies</a></li>
+        <li><a href="#cire">Fondants &amp; cires</a></li>
+        <li><a href="#pieces">Jesmonite</a></li>
+        <li><a href="#pieces">Accessoires</a></li>
+      </ul>
+      <ul class="tiroir__secondaire">
+        <li><a href="#pied">Notre histoire</a></li>
+        <li><a href="#pied">FAQ</a></li>
+        <li><a href="#pied">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="contenu">
+
+    <!-- Ouverture : la bougie détourée au centre, des pièces qui flottent sur les côtés -->
+    <section class="ouverture sur-fonce" aria-labelledby="titre-ouverture" data-scene>
+      <div class="flottant flottant--1" data-profondeur="0.25" style="--delai:-2s"><img src="../img/detoure/nova-marbre.webp" alt="" width="1100" height="642"></div>
+      <div class="flottant flottant--3" data-profondeur="0.18" style="--delai:-1s"><img src="../img/detoure/aura-5.webp" alt="" width="1100" height="866"></div>
+      <div class="flottant flottant--4" data-profondeur="-0.22" style="--delai:-3s"><img src="../img/detoure/nova-terracotta.webp" alt="" width="1100" height="628"></div>
+
+      <div class="conteneur ouverture__grille">
+        <div class="ouverture__texte">
+          <span class="surtitre">Bougies perlées · Jesmonite</span>
+          <h1 id="titre-ouverture">Coulées, poncées, <span>parfumées à la main.</span></h1>
+          <p>Bougies à la cire perlée et objets en jesmonite, en six teintes. Parfums de Grasse, cire d'origine végétale.</p>
+          <div class="ouverture__actions">
+            <a class="bouton bouton--or" href="produit-orea.html">Découvrir OREA</a>
+            <a class="lien-fleche" href="#pieces">Toute la boutique</a>
+          </div>
+        </div>
+        <div class="vedette">
+          <div class="vedette__halo"></div>
+          <div class="vedette__socle"></div>
+          <div class="vedette__objet" data-incline>
+            <img src="../img/detoure/orea-beige.webp" alt="Bougie OREA beige allumée, trois mèches" width="1100" height="608" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrousel 3D des six teintes -->
+    <section class="section" id="teintes" aria-labelledby="titre-teintes">
+      <div class="conteneur teintes">
+        <div>
+          <span class="surtitre">OREA · 6 teintes</span>
+          <h2 class="titre-section" id="titre-teintes">Faites tourner le nuancier</h2>
+          <p>Chaque pot est coulé à la main en jesmonite : le veinage du marbre et les mouchetures du granite changent d'une pièce à l'autre.</p>
+          <p style="margin-top:1.5rem"><a class="bouton" href="produit-orea.html">Voir OREA, dès 25 €</a></p>
+        </div>
+
+        <div class="carrousel" data-carrousel>
+          <div class="carrousel__scene">
+            <div class="carrousel__socle"></div>
+            <figure class="carrousel__item" data-index="0"><img src="../img/detoure/orea-terracotta.webp" alt="OREA terracotta" width="1100" height="605" loading="lazy"></figure>
+            <figure class="carrousel__item" data-index="1"><img src="../img/detoure/orea-beige.webp" alt="OREA beige" width="1100" height="608" loading="lazy"></figure>
+            <figure class="carrousel__item" data-index="2"><img src="../img/detoure/orea-blanc.webp" alt="OREA blanc" width="1100" height="657" loading="lazy"></figure>
+            <figure class="carrousel__item" data-index="3"><img src="../img/detoure/orea-granite.webp" alt="OREA gris granite" width="1100" height="654" loading="lazy"></figure>
+            <figure class="carrousel__item" data-index="4"><img src="../img/detoure/orea-marbre.webp" alt="OREA marbre noir et blanc" width="1100" height="655" loading="lazy"></figure>
+            <figure class="carrousel__item" data-index="5"><img src="../img/detoure/orea-noir.webp" alt="OREA noir" width="1100" height="611" loading="lazy"></figure>
+          </div>
+          <div class="carrousel__bas">
+            <button class="carrousel__fleche" type="button" aria-label="Teinte précédente" data-carrousel-pas="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <p class="carrousel__nom" aria-live="polite" data-carrousel-nom>Terracotta</p>
+            <button class="carrousel__fleche" type="button" aria-label="Teinte suivante" data-carrousel-pas="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          <fieldset class="choix-teintes" data-carrousel-teintes>
+            <legend class="visuellement-cache">Choisir une teinte</legend>
+            <label title="Terracotta"><input type="radio" name="carrousel" value="0" data-nom="Terracotta" checked><span class="galet galet--terracotta"></span><span class="visuellement-cache">Terracotta</span></label>
+            <label title="Beige"><input type="radio" name="carrousel" value="1" data-nom="Beige"><span class="galet galet--beige"></span><span class="visuellement-cache">Beige</span></label>
+            <label title="Blanc"><input type="radio" name="carrousel" value="2" data-nom="Blanc"><span class="galet galet--blanc"></span><span class="visuellement-cache">Blanc</span></label>
+            <label title="Gris granite"><input type="radio" name="carrousel" value="3" data-nom="Gris granite"><span class="galet galet--granite"></span><span class="visuellement-cache">Gris granite</span></label>
+            <label title="Marbre noir et blanc"><input type="radio" name="carrousel" value="4" data-nom="Marbre noir et blanc"><span class="galet galet--marbre"></span><span class="visuellement-cache">Marbre noir et blanc</span></label>
+            <label title="Noir"><input type="radio" name="carrousel" value="5" data-nom="Noir"><span class="galet galet--noir"></span><span class="visuellement-cache">Noir</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pièces phares : l'objet sort de sa carte -->
+    <section class="section" id="pieces" aria-labelledby="titre-pieces" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section__tete">
+          <div>
+            <span class="surtitre">Jesmonite</span>
+            <h2 class="titre-section" id="titre-pieces">Les pièces phares</h2>
+          </div>
+          <a class="lien-fleche" href="#">Toute la boutique</a>
+        </div>
+        <ul class="pieces">
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/orea-terracotta.webp" alt="" width="1100" height="605" loading="lazy">
+            <h3><a href="produit-orea.html">OREA</a></h3>
+            <p>Bougie perlée, pot rainuré</p>
+            <span class="piece__prix">dès 25 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/aura-4.webp" alt="" width="1085" height="824" loading="lazy">
+            <h3><a href="#">AURA</a></h3>
+            <p>Bougie perlée, pot lisse Ø 17 cm</p>
+            <span class="piece__prix">20 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/ecrins-2.webp" alt="" width="1100" height="607" loading="lazy">
+            <h3><a href="#">Les Écrins</a></h3>
+            <p>Pots seuls en jesmonite</p>
+            <span class="piece__prix">dès 18 €</span>
+          </li>
+          <li class="piece">
+            <img class="piece__objet" src="../img/detoure/nova-beige.webp" alt="" width="1100" height="627" loading="lazy">
+            <h3><a href="#">NOVA</a></h3>
+            <p>Plateau rond en jesmonite</p>
+            <span class="piece__prix">15 €</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Cire perlée -->
+    <section class="section" id="cire" aria-labelledby="titre-cire" style="padding-top:0">
+      <div class="conteneur cire">
+        <div class="cire__photo">
+          <img src="../img/akhera-1.jpg" alt="Cire perlée blanche dans un plat en bois, avec mèches et flamme" width="1600" height="1600" loading="lazy">
+        </div>
+        <div>
+          <span class="surtitre">Fondants &amp; cires</span>
+          <h2 class="titre-section" id="titre-cire">Une bougie que vous composez</h2>
+          <ol class="etapes">
+            <li><strong>Versez</strong><p>La cire perlée dans un pot stable et résistant à la chaleur.</p></li>
+            <li><strong>Plantez</strong><p>Une mèche droite, au centre, qui dépasse de 5 mm à 1 cm.</p></li>
+            <li><strong>Allumez</strong><p>Jamais sans surveillance. Laissez refroidir avant de toucher la cire.</p></li>
+            <li><strong>Rechargez</strong><p>AKHERA : 500 g de cire, 10 mèches, environ 180 heures de lumière.</p></li>
+          </ol>
+          <a class="bouton" href="#">Recharge AKHERA · 15 €</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bandeau photo avec plateau qui déborde -->
+    <section aria-labelledby="titre-bandeau">
+      <div class="conteneur">
+        <div class="bandeau-photo">
+          <div class="bandeau-photo__image">
+            <img src="../img/ambiance-4.jpg" alt="Brûleurs à fondants allumés sur une table de chevet" width="1600" height="893" loading="lazy">
+          </div>
+          <div class="flottant flottant--5" data-profondeur="-0.12" style="--delai:-4s"><img src="../img/detoure/nova-marbre.webp" alt="" width="1100" height="642" loading="lazy"></div>
+          <div class="bandeau-photo__texte">
+            <h2 id="titre-bandeau">Une place dans chaque pièce</h2>
+            <a class="lien-fleche" href="https://www.instagram.com/nefrea.bougies" rel="noopener">@nefrea.bougies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied sur-fonce" id="pied">
+    <div class="conteneur">
+      <div class="pied__haut">
+        <div>
+          <div class="pied__logo"><img src="../img/logo.png" alt="Néfréa" width="606" height="471" loading="lazy"></div>
+          <p>Les nouveautés en avant-première, une fois par mois au plus.</p>
+          <form class="formulaire-ligne" onsubmit="event.preventDefault()">
+            <label class="visuellement-cache" for="email-pied">Adresse e-mail</label>
+            <input id="email-pied" type="email" placeholder="Votre adresse e-mail" autocomplete="email">
+            <button class="bouton bouton--or" type="submit">S'inscrire</button>
+          </form>
+        </div>
+        <div>
+          <h3>Boutique</h3>
+          <ul>
+            <li><a href="#teintes">Bougies</a></li>
+            <li><a href="#cire">Fondants &amp; cires</a></li>
+            <li><a href="#pieces">Jesmonite</a></li>
+            <li><a href="#pieces">Accessoires</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aide</h3>
+          <ul>
+            <li><a href="#">Questions fréquentes</a></li>
+            <li><a href="#">Livraison</a></li>
+            <li><a href="#">Retours</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Néfréa</h3>
+          <ul>
+            <li><a href="#">Notre histoire</a></li>
+            <li><a href="https://www.instagram.com/nefrea.bougies" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pied__bas">
+        <span>© 2026 Néfréa</span>
+        <ul>
+          <li><a href="#">Conditions de vente</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

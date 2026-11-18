@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Néfréa · Bougies perlées et jesmonite faites main</title>
+  <meta name="description" content="Bougies à la cire perlée, fondants parfumés et objets en jesmonite, façonnés à la main. Parfums de Grasse, cire d'origine végétale, créations vegan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../commun.css">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="bandeau-maquette"><span>Maquette 1 · Bordeaux</span><a href="../index.html">← Voir les 2 maquettes</a></div>
+
+  <a class="visuellement-cache" href="#contenu">Aller au contenu</a>
+
+  <!-- Bandeau d'annonce -->
+  <div class="annonce">
+    <span>Livraison offerte dès 59 € d'achat</span>
+    <span>Chaque pièce est fabriquée à la main</span>
+  </div>
+
+  <!-- En-tête -->
+  <header class="entete sur-fonce">
+    <div class="conteneur entete__barre">
+      <div class="entete__gauche">
+        <button class="icone-bouton burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" data-ouvre-menu>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        </button>
+        <nav aria-label="Boutique">
+          <ul class="nav">
+            <li><a href="#meilleures-ventes">Bougies</a></li>
+            <li><a href="#univers">Fondants &amp; cires</a></li>
+            <li><a href="#nuancier">Jesmonite</a></li>
+            <li><a href="#univers">Accessoires</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <a class="entete__logo" href="index.html" aria-label="Néfréa, accueil">
+        <img src="../img/logo.png" alt="Néfréa" width="606" height="471">
+      </a>
+
+      <div class="entete__droite">
+        <nav aria-label="Informations">
+          <ul class="nav">
+            <li><a href="#atelier">Notre histoire</a></li>
+            <li><a href="#pied">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="icones">
+          <a class="icone-bouton masque-mobile" href="#" aria-label="Rechercher">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+          </a>
+          <a class="icone-bouton masque-mobile" href="#" aria-label="Mon compte">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8.5" r="3.75"/><path d="M4.5 20.25c1.2-3.6 4-5.25 7.5-5.25s6.3 1.65 7.5 5.25"/></svg>
+          </a>
+          <a class="icone-bouton" href="#" aria-label="Panier, 0 article">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+            <span class="panier-compteur" data-compteur-panier hidden>0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div class="tiroir" id="menu-mobile" data-menu>
+    <div class="tiroir__fond" data-ferme-menu></div>
+    <div class="tiroir__panneau" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="tiroir__haut">
+        <img src="../img/logo-vin.png" alt="" width="606" height="471" style="height:40px;width:auto">
+        <button class="icone-bouton" type="button" aria-label="Fermer le menu" data-ferme-menu>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <ul class="tiroir__liste">
+        <li><a href="#meilleures-ventes">Bougies <small>3 créations</small></a></li>
+        <li><a href="#univers">Fondants &amp; cires <small>2 créations</small></a></li>
+        <li><a href="#nuancier">Jesmonite <small>2 créations</small></a></li>
+        <li><a href="#univers">Accessoires <small>3 créations</small></a></li>
+      </ul>
+      <ul class="tiroir__secondaire">
+        <li><a href="#atelier">Notre histoire</a></li>
+        <li><a href="#pied">FAQ</a></li>
+        <li><a href="#pied">Contact</a></li>
+        <li><a href="#">Mon compte</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="contenu">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="titre-hero">
+      <div class="hero__texte">
+        <span class="surtitre">Bougies perlées · Jesmonite · Fait main</span>
+        <h1 id="titre-hero">Une lumière douce, façonnée à la main</h1>
+        <p class="chapo">Bougies à la cire perlée, fondants parfumés et objets en jesmonite. Des pièces coulées, poncées et parfumées une à une, pour un intérieur qui vous ressemble.</p>
+        <div class="hero__actions">
+          <a class="bouton" href="produit-orea.html">Découvrir les bougies</a>
+          <a class="lien-fleche" href="#univers">Toute la boutique</a>
+        </div>
+        <ul class="hero__preuves">
+          <li>Cire d'origine végétale</li>
+          <li>Parfums de Grasse</li>
+          <li>Créations vegan</li>
+        </ul>
+      </div>
+      <div class="hero__image">
+        <img src="../img/ambiance-6.jpg" alt="Bougie OREA beige allumée sur une table en marbre, à côté d'un bouquet d'hortensias" width="1600" height="893" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- Meilleures ventes -->
+    <section class="section" id="meilleures-ventes" aria-labelledby="titre-ventes">
+      <div class="conteneur">
+        <div class="section__tete">
+          <div>
+            <span class="surtitre">Les plus aimées</span>
+            <h2 class="titre-section" id="titre-ventes">Meilleures ventes</h2>
+          </div>
+          <a class="lien-fleche" href="#univers">Toute la boutique</a>
+        </div>
+
+        <ul class="grille-produits">
+          <li class="carte apparait">
+            <div class="carte__image"><img src="../img/orea-beige.jpg" alt="" width="1600" height="2143" loading="lazy"></div>
+            <h3 class="carte__nom"><a href="produit-orea.html">OREA</a></h3>
+            <p class="carte__type">Bougie perlée, pot rainuré</p>
+            <div class="carte__bas">
+              <span class="carte__prix"><small>dès</small> 25,00 €</span>
+              <span class="mini-teintes" aria-label="6 teintes">
+                <span class="galet galet--terracotta"></span><span class="galet galet--beige"></span><span class="galet galet--blanc"></span><span class="galet galet--granite"></span><span class="galet galet--marbre"></span><span class="galet galet--noir"></span>
+              </span>
+            </div>
+          </li>
+          <li class="carte apparait">
+            <div class="carte__image"><img src="../img/aura-5.jpg" alt="" width="1600" height="2143" loading="lazy"></div>
+            <h3 class="carte__nom"><a href="#">AURA</a></h3>
+            <p class="carte__type">Bougie perlée, pot lisse Ø 17 cm</p>
+            <div class="carte__bas">
+              <span class="carte__prix">20,00 €</span>
+              <span class="mini-teintes" aria-label="5 teintes">
+                <span class="galet galet--terracotta"></span><span class="galet galet--beige"></span><span class="galet galet--granite"></span><span class="galet galet--marbre"></span><span class="galet galet--noir"></span>
+              </span>
+            </div>
+          </li>
+          <li class="carte apparait">
+            <div class="carte__image"><img src="../img/akhera-1.jpg" alt="" width="1600" height="1600" loading="lazy"></div>
+            <h3 class="carte__nom"><a href="#">AKHERA</a></h3>
+            <p class="carte__type">Recharge de cire perlée, 500 g</p>
+            <div class="carte__bas">
+              <span class="carte__prix">15,00 €</span>
+              <span class="carte__type" style="margin:0">8 senteurs</span>
+            </div>
+          </li>
+          <li class="carte apparait">
+            <div class="carte__image"><img src="../img/eclat.jpg" alt="" width="1600" height="1195" loading="lazy"></div>
+            <h3 class="carte__nom"><a href="#">ÉCLAT</a></h3>
+            <p class="carte__type">Fondants parfumés</p>
+            <div class="carte__bas">
+              <span class="carte__prix"><small>dès</small> 7,00 €</span>
+              <span class="carte__type" style="margin:0">8 senteurs</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Nuancier : l'élément signature -->
+    <section class="nuancier section sur-fonce" id="nuancier" aria-labelledby="titre-nuancier">
+      <div class="conteneur nuancier__grille">
+        <div class="nuancier__visuel apparait" data-nuancier-visuel>
+          <img src="../img/orea-terracotta.jpg" alt="Bougie OREA, teinte terracotta" width="1600" height="2143" loading="lazy" data-nuancier-image>
+          <img class="est-cache" src="../img/orea-terracotta.jpg" alt="" width="1600" height="2143" loading="lazy" aria-hidden="true" data-nuancier-image-suivante>
+          <span class="nuancier__etiquette" data-nuancier-etiquette>OREA · Terracotta</span>
+        </div>
+
+        <div class="apparait">
+          <span class="surtitre">Le nuancier jesmonite</span>
+          <h2 class="titre-section" id="titre-nuancier">Six teintes, coulées à la main</h2>
+          <p>Chaque pot OREA, AURA ou NOVA est coulé, démoulé et poncé à la main. Choisissez la teinte qui ira avec votre intérieur : le veinage du marbre et les mouchetures du granite changent d'une pièce à l'autre.</p>
+
+          <fieldset class="choix-teintes" data-nuancier>
+            <legend class="visuellement-cache">Choisir une teinte</legend>
+            <label title="Terracotta"><input type="radio" name="nuancier" value="terracotta" data-nom="Terracotta" checked><span class="galet galet--terracotta"></span><span class="visuellement-cache">Terracotta</span></label>
+            <label title="Beige"><input type="radio" name="nuancier" value="beige" data-nom="Beige"><span class="galet galet--beige"></span><span class="visuellement-cache">Beige</span></label>
+            <label title="Blanc"><input type="radio" name="nuancier" value="blanc" data-nom="Blanc"><span class="galet galet--blanc"></span><span class="visuellement-cache">Blanc</span></label>
+            <label title="Gris granite"><input type="radio" name="nuancier" value="granite" data-nom="Gris granite"><span class="galet galet--granite"></span><span class="visuellement-cache">Gris granite</span></label>
+            <label title="Marbre noir et blanc"><input type="radio" name="nuancier" value="marbre" data-nom="Marbre noir et blanc"><span class="galet galet--marbre"></span><span class="visuellement-cache">Marbre noir et blanc</span></label>
+            <label title="Noir"><input type="radio" name="nuancier" value="noir" data-nom="Noir"><span class="galet galet--noir"></span><span class="visuellement-cache">Noir</span></label>
+          </fieldset>
+          <p class="nuancier__nom" aria-live="polite" data-nuancier-nom>Terracotta</p>
+
+          <div class="nuancier__liens">
+            <a class="bouton bouton--or" href="produit-orea.html">Voir la bougie OREA</a>
+            <a class="lien-fleche" href="#">Les pots seuls, dès 18 €</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Univers -->
+    <section class="section" id="univers" aria-labelledby="titre-univers">
+      <div class="conteneur">
+        <div class="section__tete">
+          <div>
+            <span class="surtitre">La boutique</span>
+            <h2 class="titre-section" id="titre-univers">Que cherchez-vous&nbsp;?</h2>
+          </div>
+        </div>
+        <ul class="univers">
+          <li class="apparait">
+            <a class="univers__carte" href="#">
+              <img src="../img/ambiance-5.jpg" alt="" width="1600" height="893" loading="lazy">
+              <span class="univers__texte"><strong>Bougies</strong><span>OREA, AURA, Les Lumineuses</span></span>
+            </a>
+          </li>
+          <li class="apparait">
+            <a class="univers__carte" href="#">
+              <img src="../img/bruleurs.jpg" alt="" width="1600" height="1195" loading="lazy">
+              <span class="univers__texte"><strong>Fondants &amp; cires</strong><span>Éclat, recharge AKHERA</span></span>
+            </a>
+          </li>
+          <li class="apparait">
+            <a class="univers__carte" href="#">
+              <img src="../img/ambiance-3.jpg" alt="" width="1600" height="893" loading="lazy">
+              <span class="univers__texte"><strong>Jesmonite</strong><span>Pots Écrins, plateau NOVA</span></span>
+            </a>
+          </li>
+          <li class="apparait">
+            <a class="univers__carte" href="#">
+              <img src="../img/cat-accessoires.jpg" alt="" width="1024" height="1024" loading="lazy">
+              <span class="univers__texte"><strong>Accessoires</strong><span>Brûleurs, mèches, coupe-mèche</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Mode d'emploi cire perlée -->
+    <section class="section section--cire" aria-labelledby="titre-mode">
+      <div class="conteneur mode-emploi">
+        <div class="mode-emploi__image apparait">
+          <img src="../img/akhera-1.jpg" alt="Cire perlée blanche versée dans un plat en bois, avec des mèches et une flamme allumée" width="1600" height="1600" loading="lazy">
+        </div>
+        <div class="apparait">
+          <span class="surtitre">La cire perlée, mode d'emploi</span>
+          <h2 class="titre-section" id="titre-mode">Une bougie que vous composez vous-même</h2>
+          <ol class="etapes">
+            <li><div><strong>Versez la cire</strong><p>Dans un contenant stable et résistant à la chaleur, comme nos pots OREA ou AURA.</p></div></li>
+            <li><div><strong>Plantez la mèche</strong><p>Bien droite, au centre, en la laissant dépasser de 5 mm à 1 cm.</p></div></li>
+            <li><div><strong>Allumez</strong><p>Ne laissez jamais la flamme sans surveillance. Après extinction, laissez refroidir avant de toucher la cire.</p></div></li>
+            <li><div><strong>Rechargez</strong><p>Une recharge AKHERA, c'est 500 g de cire, 10 mèches et environ 180 heures de lumière.</p></div></li>
+          </ol>
+          <a class="bouton bouton--contour" href="#">Découvrir la recharge AKHERA</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- L'atelier -->
+    <section class="section" id="atelier" aria-labelledby="titre-atelier">
+      <div class="conteneur atelier">
+        <div class="atelier__image apparait">
+          <img src="../img/ambiance-2.jpg" alt="Coupe et plateau en jesmonite terracotta sur une table dressée en extérieur" width="1600" height="893" loading="lazy">
+        </div>
+        <div class="apparait">
+          <span class="surtitre">L'atelier</span>
+          <h2 class="visuellement-cache" id="titre-atelier">L'atelier Néfréa</h2>
+          <blockquote>« Le bien-être se cultive dans les petits plaisirs du quotidien : une senteur que l'on aime, une lumière douce, un bel objet qui trouve sa place. »</blockquote>
+          <dl class="engagements">
+            <div><dt>Fait main</dt><dd>Bougies, fondants et pièces en jesmonite sont façonnés à la main, du choix des matières aux finitions.</dd></div>
+            <div><dt>Parfums de Grasse</dt><dd>Des matières premières sélectionnées auprès de fournisseurs établis en France.</dd></div>
+            <div><dt>Vegan</dt><dd>Une cire d'origine végétale et une démarche attentive à l'environnement.</dd></div>
+          </dl>
+          <a class="lien-fleche" href="#">Lire notre histoire</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="section section--cire" aria-labelledby="titre-galerie">
+      <div class="conteneur">
+        <div class="section__tete">
+          <div>
+            <span class="surtitre">Chez vous</span>
+            <h2 class="titre-section" id="titre-galerie">Une place dans chaque pièce</h2>
+          </div>
+          <a class="lien-fleche" href="https://www.instagram.com/nefrea.bougies" rel="noopener">@nefrea.bougies sur Instagram</a>
+        </div>
+        <ul class="galerie">
+          <li class="apparait"><img src="../img/ambiance-1.jpg" alt="Bougie blanche sur une coiffeuse, dans une chambre lumineuse" width="1600" height="893" loading="lazy"></li>
+          <li class="apparait"><img src="../img/ambiance-4.jpg" alt="Brûleurs à fondants allumés sur une table de chevet" width="1600" height="893" loading="lazy"></li>
+          <li class="apparait"><img src="../img/ambiance-7.jpg" alt="Bougie en jesmonite sur une grande table de ferme en bois" width="1600" height="893" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Réassurance -->
+    <div class="conteneur" style="padding-block: clamp(2.5rem, 5vw, 4rem);">
+      <ul class="reassurance">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          <div><strong>Fabriqué pour vous</strong><span>Environ 4 jours ouvrés de fabrication avant l'expédition.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5v-9Z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></svg>
+          <div><strong>Livraison offerte</strong><span>Dès 59 € d'achat.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4.5v4h4"/></svg>
+          <div><strong>Retours sous 14 jours</strong><span>Écrivez-nous avec votre numéro de commande.</span></div>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="pied sur-fonce" id="pied">
+    <div class="conteneur">
+      <div class="pied__haut">
+        <div class="pied__newsletter">
+          <div class="pied__logo"><img src="../img/logo.png" alt="Néfréa" width="606" height="471" loading="lazy"></div>
+          <p>Recevez en avant-première les nouvelles collections et les offres réservées aux abonnés.</p>
+          <form class="formulaire-ligne" onsubmit="event.preventDefault()">
+            <label class="visuellement-cache" for="email-pied">Adresse e-mail</label>
+            <input id="email-pied" type="email" placeholder="Votre adresse e-mail" autocomplete="email">
+            <button class="bouton bouton--or" type="submit">S'inscrire</button>
+          </form>
+        </div>
+        <div>
+          <h3>Boutique</h3>
+          <ul>
+            <li><a href="#">Bougies</a></li>
+            <li><a href="#">Fondants &amp; cires</a></li>
+            <li><a href="#">Jesmonite</a></li>
+            <li><a href="#">Accessoires</a></li>
+            <li><a href="#">Meilleures ventes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aide</h3>
+          <ul>
+            <li><a href="#">Questions fréquentes</a></li>
+            <li><a href="#">Livraison</a></li>
+            <li><a href="#">Retours</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Néfréa</h3>
+          <ul>
+            <li><a href="#">Notre histoire</a></li>
+            <li><a href="https://www.instagram.com/nefrea.bougies" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pied__bas">
+        <span>© 2026 Néfréa</span>
+        <ul>
+          <li><a href="#">Conditions de vente</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
