@@ -273,16 +273,17 @@ h1, h2, h3 {
   overflow-x: clip;   /* coupe sur les côtés, laisse déborder vers le bas */
   isolation: isolate;
   background:
-    radial-gradient(55% 65% at 68% 52%, var(--braise) 0%, #5c1514 42%, var(--nuit) 100%);
+    radial-gradient(55% 75% at 74% 72%, var(--braise) 0%, #5c1514 42%, var(--nuit) 100%);
   color: var(--creme);
 }
 .ouverture__grille {
+  --debord: clamp(70px, 9vw, 150px);   /* hauteur de pot qui dépasse sous le bandeau */
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   gap: 2rem;
-  min-height: clamp(560px, 64vw, 820px);
-  padding-block: 3rem 5rem;
+  min-height: clamp(460px, 42vw, 600px);
+  padding-block: 3.5rem 4rem;
 }
 .ouverture__texte { position: relative; z-index: 3; }
 .ouverture h1 {
@@ -324,11 +325,44 @@ h1, h2, h3 {
   background: radial-gradient(closest-side, rgba(10, 0, 0, 0.55), rgba(10, 0, 0, 0));
 }
 
-/* Positions des objets latéraux dans l'ouverture */
-.flottant--1 { --l: clamp(160px, 19vw, 300px); top: 6%; left: -5%; --ry: 38deg; --rx: 18deg; --rz: -14deg; --flou: 1.5px; }
-.flottant--2 { --l: clamp(110px, 12vw, 190px); bottom: 7%; left: 30%; --ry: 25deg; --rz: 8deg; --flou: 3px; opacity: 0.75; }
-.flottant--3 { --l: clamp(170px, 20vw, 320px); top: 2%; right: -6%; --ry: -42deg; --rx: 10deg; --rz: 12deg; --flou: 1px; }
-.flottant--4 { --l: clamp(220px, 26vw, 420px); bottom: -11%; right: 4%; --rx: 48deg; --rz: -6deg; z-index: 4; }
+/* Le pot posé devant le bandeau bordeaux, qui en déborde vers le bas */
+.debord {
+  position: absolute;
+  z-index: 2;
+  right: var(--gouttiere);
+  bottom: calc(-1 * var(--debord));
+  width: min(52%, 660px);
+}
+.debord__pot {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 26px 22px rgba(30, 6, 6, 0.35));
+}
+.debord__ombre {        /* ombre posée sur la partie rose, sous le pot */
+  position: absolute;
+  z-index: 1;
+  left: 8%;
+  right: 8%;
+  bottom: -6%;
+  height: 18%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(60, 20, 18, 0.42), rgba(60, 20, 18, 0));
+}
+.debord__halo {         /* lueur des flammes, dans le bandeau */
+  position: absolute;
+  z-index: 0;
+  left: 6%;
+  right: 6%;
+  top: -48%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 196, 130, 0.5), rgba(255, 196, 130, 0));
+  animation: lueur 3s ease-in-out infinite;
+}
+/* la section suivante laisse la place au pot qui dépasse */
+.ouverture + .section { padding-top: calc(clamp(70px, 9vw, 150px) + clamp(3rem, 6vw, 5rem)); }
 
 /* --------------------------------------------------------------------------
    Carrousel 3D des teintes (élément signature)
@@ -887,12 +921,9 @@ h1, h2, h3 {
   .entete nav { display: none; }
   .icones .masque-mobile { display: none; }
 
-  .ouverture__grille { grid-template-columns: 1fr; min-height: 0; padding-block: 2.5rem 6rem; }
-  .vedette { order: -1; width: min(100%, 520px); margin-inline: auto; }
-  .flottant--1 { top: 2%; left: -14%; }
-  .flottant--2 { display: none; }
-  .flottant--3 { top: 24%; right: -16%; }
-  .flottant--4 { --l: 200px; bottom: -6%; right: -8%; }
+  .ouverture__grille { --debord: 20vw; grid-template-columns: minmax(0, 1fr); min-height: 0; padding-block: 2.5rem calc(min(88vw, 520px) * 0.553 - var(--debord) + 2.5rem); }
+  .debord { right: 50%; width: min(88vw, 520px); transform: translateX(50%); }
+  .ouverture + .section { padding-top: calc(20vw + 3rem); }
 
   .teintes,
   .cire,
