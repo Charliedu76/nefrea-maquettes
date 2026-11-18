@@ -514,6 +514,61 @@ h1, h2, h3 {
 .etapes strong { display: block; }
 .etapes p { margin: 0.2rem 0 0; color: var(--gris); font-size: 0.93rem; }
 
+/* Version avec un schéma par étape */
+.schemas-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.section__tete--serre { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+.etapes--schemas {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.6vw, 1.25rem);
+  margin: 0;
+}
+.etapes--schemas li { position: relative; padding: 0.7rem 0.7rem 1.4rem; border-radius: var(--rayon); }
+.etapes--schemas li::before { position: absolute; top: 1.15rem; left: 1.15rem; margin: 0; z-index: 1; }
+.etapes--schemas strong {
+  padding-inline: 0.55rem;
+  font-family: var(--f-titre);
+  font-weight: 700;
+  font-stretch: 80%;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+.etapes--schemas p { padding-inline: 0.55rem; }
+
+.schema {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  background: radial-gradient(80% 85% at 50% 40%, #fffaf6, var(--rose));
+}
+
+/* Petites animations des schémas (coupées si l'utilisateur réduit les animations) */
+.perles-tombent circle { animation: tombe 1.5s linear infinite; animation-delay: calc(var(--i) * -0.3s); }
+@keyframes tombe {
+  0% { transform: translate(3px, -7px); opacity: 0; }
+  20%, 75% { opacity: 1; }
+  100% { transform: translate(-3px, 8px); opacity: 0; }
+}
+.meche-descend { animation: plante 3s cubic-bezier(.3, .7, .3, 1) infinite; }
+@keyframes plante {
+  0% { transform: translateY(-16px); opacity: 0; }
+  15% { opacity: 1; }
+  50%, 100% { transform: none; opacity: 1; }
+}
+.flamme { transform-box: fill-box; transform-origin: 50% 100%; animation: vacille 2.2s ease-in-out infinite; }
+@keyframes vacille {
+  0%, 100% { transform: none; }
+  25% { transform: scale(0.95, 1.06) rotate(-2deg); }
+  50% { transform: scale(1.03, 0.96) rotate(1.5deg); }
+  75% { transform: scale(0.98, 1.04) rotate(-1deg); }
+}
+.halo { animation: lueur 2.2s ease-in-out infinite; }
+@keyframes lueur { 50% { opacity: 0.75; } }
+.fleche-recharge { animation: defile 1s linear infinite; }
+@keyframes defile { to { stroke-dashoffset: -16; } }
+
 /* --------------------------------------------------------------------------
    Bandeau photo avec objet qui déborde
    -------------------------------------------------------------------------- */
@@ -845,6 +900,7 @@ h1, h2, h3 {
   .teintes > div:first-child { text-align: left; }
 
   .pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .etapes--schemas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pieces--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pied__haut { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pied__haut > :first-child { grid-column: 1 / -1; }
@@ -859,6 +915,17 @@ h1, h2, h3 {
   .piece { min-height: 0; padding: 0 1rem 1rem; }
   .piece h3 { font-size: 1.45rem; }
   .etapes { grid-template-columns: minmax(0, 1fr); }
+  .etapes--schemas li {
+    display: grid;
+    grid-template-columns: 44% minmax(0, 1fr);
+    column-gap: 0.9rem;
+    align-items: center;
+    padding: 0.6rem;
+  }
+  .etapes--schemas li::before { top: 0.95rem; left: 0.95rem; width: 28px; height: 28px; font-size: 0.8rem; }
+  .etapes--schemas .schema { grid-row: span 2; margin: 0; }
+  .etapes--schemas strong { align-self: end; padding: 0; font-size: 1.35rem; }
+  .etapes--schemas p { align-self: start; padding: 0; }
   .flottant--5 { --l: 150px; top: -10%; }
   .achat { flex-wrap: wrap; }
   .achat .bouton { flex-basis: 100%; }
